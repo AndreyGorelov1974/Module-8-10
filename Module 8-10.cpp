@@ -25,7 +25,10 @@ int main()
 	int secondNumber;
 	std::cin >> secondNumber;
 
-	int maxNumber = (firstNumber + secondNumber + abs(firstNumber - secondNumber )) / 2;
+	int maxNumber = (firstNumber + secondNumber + abs(firstNumber - secondNumber)) / 2;
+	// чтобы совсем избавиться от условий - модуль можно посчитать как корень из квадрата
+
+
 
 	
 	std::cout << "Из двух введёных чисел " << firstNumber << " и " << secondNumber << " максимальным является " << maxNumber;
