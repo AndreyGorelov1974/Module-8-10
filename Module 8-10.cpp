@@ -9,35 +9,25 @@
 Решение не является просто функцией std::max.*/
 
 #include <iostream>
+#include <Windows.h>
 
 int main()
 {
-	//Задаём максимальную высоту ёлочки
-	int maxWidth = 40;
 
-	std::cout << "Введите высоту ёлочки: ";
-	int spruceHeight;
-	std::cin >> spruceHeight;
-	while (spruceHeight < 1 || spruceHeight > maxWidth) {
-		std::cout << "Высота ёлочки должна быть в пределах от 1 до " << maxWidth << ". Введите снова: ";
-		std::cin >> spruceHeight;
-	}
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
-	//Вычисляем ширину ёлочки
-	int spruceWidth = 1 + (spruceHeight - 1) * 2;
+	std::cout << "Введите первое число: ";
+	int firstNumber;
+	std::cin >> firstNumber;
 
-	//Цетр ёлочки равен её высоте
-	for (int spruceLevel = 0; spruceLevel < spruceHeight; spruceLevel++) {
+	std::cout << "Введите второе число: ";
+	int secondNumber;
+	std::cin >> secondNumber;
 
-		//Выводим левую половину пробелов
-		for (int i = 1; i < spruceHeight - spruceLevel; i++) std::cout << " ";
+	int maxNumber = (firstNumber + secondNumber + abs(firstNumber - secondNumber )) / 2;
 
-		//Выводим #
-		for (int i = 0; i < 1 + (spruceLevel * 2); i++) std::cout << "#";
-
-		//Выводим правую половину пробелов
-		for (int i = 1; i < spruceHeight - spruceLevel; i++) std::cout << " ";
-
-		std::cout << std::endl;
-	}
+	
+	std::cout << "Из двух введёных чисел " << firstNumber << " и " << secondNumber << " максимальным является " << maxNumber;
+	
 }
