@@ -35,7 +35,7 @@ int main() {
     float maxNumber = (firstNumber + secondNumber + std::fabs(firstNumber - secondNumber)) / 2;
 
     // чтобы совсем избавиться от условий - модуль можно посчитать как корень из квадрата
-        // float maxNumber =(firstNumber + secondNumber + sqrtf((firstNumber - secondNumber) * (firstNumber - secondNumber))) / 2;
+    // float maxNumber =(firstNumber + secondNumber + sqrtf((firstNumber - secondNumber) * (firstNumber - secondNumber))) / 2;
 
     std::cout << "Из двух введёных чисел " << firstNumber << " и " << secondNumber
         << " максимальным является " << maxNumber;
